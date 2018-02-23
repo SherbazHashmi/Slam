@@ -129,6 +129,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="Arj-Nv-Pyk" eventType="touchUpInside" id="Vbj-WF-3I2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ni-fM-Y2h" customClass="BorderButton" customModule="slam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="335" height="45"/>
@@ -140,6 +143,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="Arj-Nv-Pyk" eventType="touchUpInside" id="tFJ-jm-Mu5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MN-iL-HiY" customClass="BorderButton" customModule="slam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="139.99999999999997" width="335" height="45"/>
@@ -151,10 +157,13 @@
                                         <state key="normal" title="Co-Ed">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoEdsTapped:" destination="Arj-Nv-Pyk" eventType="touchUpInside" id="bd6-qj-BXo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iy-N6-xHi" customClass="BorderButton" customModule="slam" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iy-N6-xHi" customClass="BorderButton" customModule="slam" customModuleProvider="target">
                                 <rect key="frame" x="15" y="733" width="345" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -201,6 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="kAS-bf-yrp"/>
                     </view>
                     <connections>
+                        <outlet property="nextBtn" destination="9iy-N6-xHi" id="CRA-aV-A5f"/>
                         <segue destination="Mic-Sz-JeS" kind="show" identifier="skillVCSegue" id="M9U-mv-tFj"/>
                     </connections>
                 </viewController>
