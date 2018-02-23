@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="slam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="slam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,6 @@
                             <constraint firstItem="cJp-4V-EOr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bb-Bg-zTW"/>
                             <constraint firstItem="pMp-6T-y7D" firstAttribute="width" secondItem="ICD-0e-GcI" secondAttribute="width" multiplier="0.68" id="92R-Jm-Hzs"/>
                             <constraint firstItem="cJp-4V-EOr" firstAttribute="top" secondItem="FNW-Dq-JpQ" secondAttribute="bottom" constant="14" id="B9I-XL-ioX"/>
-                            <constraint firstItem="kj2-ZV-OEJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="BWZ-Ay-uSk"/>
                             <constraint firstItem="Ofd-qj-EjS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="DlF-4C-wWd"/>
                             <constraint firstItem="ICD-0e-GcI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EE7-WS-k7i"/>
                             <constraint firstItem="kj2-ZV-OEJ" firstAttribute="centerX" secondItem="cJp-4V-EOr" secondAttribute="centerX" id="ESV-h2-yQI"/>
@@ -92,19 +91,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="ICD-0e-GcI" id="Cyw-qq-zMl"/>
-                        <outlet property="logo" destination="Ofd-qj-EjS" id="VF4-Um-ugv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.19999999999999" y="132.26600985221674"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="zLF-7V-tgE">
             <objects>
-                <viewController id="Arj-Nv-Pyk" sceneMemberID="viewController">
+                <viewController id="Arj-Nv-Pyk" customClass="LeagueVC" customModule="slam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PoS-Uo-OBu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +165,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mic-Sz-JeS" kind="show" id="4Q4-VU-po2"/>
+                                    <action selector="onNextTapped:" destination="Arj-Nv-Pyk" eventType="touchUpInside" id="TSx-BE-RE5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsa-6F-J3v">
@@ -205,16 +200,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kAS-bf-yrp"/>
                     </view>
+                    <connections>
+                        <segue destination="Mic-Sz-JeS" kind="show" identifier="skillVCSegue" id="M9U-mv-tFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvD-hO-XEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2wr-io-QjC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="965.625" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="Pgl-Da-2h1">
             <objects>
-                <viewController id="Mic-Sz-JeS" sceneMemberID="viewController">
+                <viewController id="Mic-Sz-JeS" customClass="SkillVC" customModule="slam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4cm-3I-7sP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +285,6 @@
                             <constraint firstItem="Yr4-Bh-LmA" firstAttribute="centerX" secondItem="4cm-3I-7sP" secondAttribute="centerX" id="ask-Fd-W64"/>
                             <constraint firstItem="KaF-IN-gOW" firstAttribute="trailing" secondItem="wW4-3n-DrX" secondAttribute="trailing" constant="15" id="e2A-3l-ePN"/>
                             <constraint firstItem="wW4-3n-DrX" firstAttribute="bottom" secondItem="KaF-IN-gOW" secondAttribute="bottom" id="s3J-IV-LLd"/>
-                            <constraint firstItem="wW4-3n-DrX" firstAttribute="leading" secondItem="KaF-IN-gOW" secondAttribute="leading" constant="15" id="t3i-Tr-jHl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KaF-IN-gOW"/>
                     </view>
